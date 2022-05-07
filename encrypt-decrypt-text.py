@@ -54,5 +54,3 @@ def decryptCyphertext(text,alphabet_reverse,alphabet):
         plainText.append(list(D.keys())[position])
     return ''.join(plainText)
 
-cipher_text=encryptPlaintext(text,alphabet_reverse,_letters)
-print(decryptCyphertext(cipher_text,alphabet_reverse,_letters))
