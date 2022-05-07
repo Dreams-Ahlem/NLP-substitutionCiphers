@@ -6,23 +6,25 @@
 
 #This substitution cipher would read: ZYXWVUTSRQPONMLKJIHGFEDCBA.
 #This second alphabet is often referred to as the "ciphertext."
-
-
-
-
 import string
 
 
+# We assign to _letters the lowercase letters ‘abcdefghijklmnopqrstuvwxyz’.
+
 _letters=string.ascii_lowercase
 
-def alphabet_reverse(alphabet):
-    dictio={}
-    n=len(alphabet)
+def alphabet_reverse(alphabets):
+    #This function will create a dictionary that assigns to each letter of the alphabet 
+    #its value= an alphabet back-end
+    D={' ':' '} #we create an dictionary containing the space and its value
+    n=len(alphabets)
     for i in range(n):
-        dictio[alphabet[i]]=alphabet[n-1-i]
-        
-    return dictio
+        D[alphabets[i]]=alphabets[n-1-i]
+    return D
 dictionary=alphabet_reverse(_letters)
+
+
+print(dictionary)
 
 
 
