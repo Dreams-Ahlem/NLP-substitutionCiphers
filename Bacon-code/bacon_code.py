@@ -39,3 +39,22 @@ def bacon_s_code(alphabet):
         dict[alphabet[i]]=liste[i-2]
     return dict
 bacon_s_code(_letters)
+
+def encryptPlaintext(word,alphabet):
+    D=bacon_s_code(alphabet)
+    cipherText=[]
+    for i in word:
+        i=i.lower()
+        cipherText.append(D[i]+'-')
+    return ''.join(cipherText)
+print(encryptPlaintext('Ahlem',_letters))
+
+
+
+
+#decryptCyphertext(encryptPlaintext('Ahlem',_letters,11,'Dreams'),_letters,11,'Dreams')
+
+
+
+
+
